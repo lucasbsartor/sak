@@ -5,13 +5,15 @@
 - **Prefer `bun`** over npm/yarn/pnpm for all commands.
 - **Prefer Bun APIs** (`Bun.file`, `Bun.serve`, `bun:sqlite`, `Bun.$`) over Node.js equivalents.
 - **Don't run dev/build commands** (`bun dev`, `bun build`) unless specifically requested.
-- **Don't use `tsc`** — this project uses oxc for type checking and linting via `oxlint --type-aware --type-check`.
-- **Imports and formatting** are handled by oxlint and oxfmt. After making changes, run `bun run format` to auto-fix.
+- **Don't use `tsc`** — this project uses oxc for type checking and linting via `oxlint` (type-aware and type-check are enabled in `.oxlintrc.json`).
+- **Imports and formatting** are handled by oxlint and oxfmt. After making changes, run `bun run fmt` to auto-fix.
 
 ## Commands
 
-- Type check / lint: `bun run check-types` or `bun run lint`
-- Format: `bun run format`
+- Type check / lint: `bun run lint`
+- Fix lint issues: `bun run lint:fix`
+- Format: `bun run fmt`
+- Check formatting: `bun run fmt:check`
 
 ## UI Components (shadcn/ui)
 

@@ -4,6 +4,12 @@
     "description": "SAK - Swiss Army Knife of tech stuff",
     "type": "module",
     "module": "index.ts",
+    "scripts": {
+        "lint": "oxlint",
+        "lint:fix": "oxlint --fix",
+        "fmt": "oxfmt --write",
+        "fmt:check": "oxfmt --check"
+    },
     "devDependencies": {
         "@types/bun": "latest",
         "oxfmt": "^0.36.0",
